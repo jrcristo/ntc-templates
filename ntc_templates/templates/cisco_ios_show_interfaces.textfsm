@@ -28,6 +28,7 @@ Value RUNTS (\d+)
 Value GIANTS (\d+)
 Value INPUT_ERRORS (\d+)
 Value CRC (\d+)
+Value DROPS (\d+)
 Value FRAME (\d+)
 Value OVERRUN (\d+)
 Value ABORT (\d+)
@@ -58,6 +59,7 @@ Start
   ^\s+${RUNTS}\s+runts,\s+${GIANTS}\s+giants,\s+\d+\s+throttles\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+${FRAME}\s+frame,\s+${OVERRUN}\s+overrun,\s+\d+\s+ignored\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+${FRAME}\s+frame,\s+${OVERRUN}\s+overrun,\s+\d+\s+ignored,\s+${ABORT}\s+abort\s*$$
+  ^\s+Input\s+que.+\s${DROPS}
   ^\s+${OUTPUT_PACKETS}\s+packets\s+output,\s+\d+\s+bytes,\s+\d+\s+underruns\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors,\s+\d+\s+collisions,\s+\d+\s+interface\s+resets\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
